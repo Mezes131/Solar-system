@@ -1,0 +1,21 @@
+{
+  "name": "solar-system",
+  "version": "1.0.0",
+  "description": "Une simulation interactive et éducative du système solaire en 3D créée avec Three.js.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "three": "^0.179.1"
+  },
+  "devDependencies": {
+    "vite": "^7.1.3"
+  }
+}
