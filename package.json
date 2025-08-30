@@ -9,12 +9,22 @@
     "preview": "vite preview",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0"
   },
-  "keywords": ["threejs", "react", "3d", "solar-system", "astronomy", "education"],
+  "keywords": [
+    "threejs",
+    "react",
+    "3d",
+    "solar-system",
+    "astronomy",
+    "education"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "i18next": "^25.4.2",
+    "i18next-browser-languagedetector": "^8.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-i18next": "^15.7.3",
     "react-router-dom": "^6.28.0",
     "three": "^0.128.0"
   },

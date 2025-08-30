@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import SidePanel from './SidePanel';
@@ -8,6 +9,7 @@ import PlanetLabels from './PlanetLabels';
 import '../css/solar-system.css';
 
 const SolarSystem = () => {
+  const { t } = useTranslation();
   const mountRef = useRef(null);
   const sceneRef = useRef(null);
   const rendererRef = useRef(null);
@@ -95,7 +97,7 @@ const SolarSystem = () => {
     });
 
     const sun = new THREE.Mesh(sunGeometry, sunMaterial);
-    sun.name = "Sun";
+    sun.name = t('solarSystem.info.sun');
     scene.add(sun);
 
     // Sun glow effect amélioré
@@ -111,11 +113,11 @@ const SolarSystem = () => {
     // Create planets with complete data et géométrie parfaite
     const planetData = [
       {
-        name: "Mercure",
-        type: "Planète tellurique",
+        name: t('solarSystem.info.mercury'),
+        type: t('solarSystem.planetTypes.terrestrial'),
         distance: "0.39 AU",
         size: "4.879 km",
-        revolution: "88 jours",
+        revolution: `88 ${t('solarSystem.timeUnits.days')}`,
         color: 0x8C7853,
         radius: 1.5,
         orbitRadius: 20,
@@ -123,11 +125,11 @@ const SolarSystem = () => {
         rotationSpeed: 0.01
       },
       {
-        name: "Vénus",
-        type: "Planète tellurique",
+        name: t('solarSystem.info.venus'),
+        type: t('solarSystem.planetTypes.terrestrial'),
         distance: "0.72 AU",
         size: "12.104 km",
-        revolution: "225 jours",
+        revolution: `225 ${t('solarSystem.timeUnits.days')}`,
         color: 0xFFC649,
         radius: 2.5,
         orbitRadius: 35,
@@ -135,11 +137,11 @@ const SolarSystem = () => {
         rotationSpeed: 0.008
       },
       {
-        name: "Terre",
-        type: "Planète tellurique",
+        name: t('solarSystem.info.earth'),
+        type: t('solarSystem.planetTypes.terrestrial'),
         distance: "1 AU",
         size: "12.756 km",
-        revolution: "365 jours",
+        revolution: `365 ${t('solarSystem.timeUnits.days')}`,
         color: 0x6B93D6,
         radius: 2.8,
         orbitRadius: 50,
@@ -148,11 +150,11 @@ const SolarSystem = () => {
         hasMoon: true
       },
       {
-        name: "Mars",
-        type: "Planète tellurique",
+        name: t('solarSystem.info.mars'),
+        type: t('solarSystem.planetTypes.terrestrial'),
         distance: "1.52 AU",
         size: "6.792 km",
-        revolution: "687 jours",
+        revolution: `687 ${t('solarSystem.timeUnits.days')}`,
         color: 0xC1440E,
         radius: 2.2,
         orbitRadius: 65,
@@ -160,11 +162,11 @@ const SolarSystem = () => {
         rotationSpeed: 0.01
       },
       {
-        name: "Jupiter",
-        type: "Planète géante gazeuse",
+        name: t('solarSystem.info.jupiter'),
+        type: t('solarSystem.planetTypes.gasGiant'),
         distance: "5.20 AU",
         size: "142.984 km",
-        revolution: "12 ans",
+        revolution: `12 ${t('solarSystem.timeUnits.years')}`,
         color: 0xD8CA9D,
         radius: 8,
         orbitRadius: 100,
@@ -172,11 +174,11 @@ const SolarSystem = () => {
         rotationSpeed: 0.02
       },
       {
-        name: "Saturne",
-        type: "Planète géante gazeuse",
+        name: t('solarSystem.info.saturn'),
+        type: t('solarSystem.planetTypes.gasGiant'),
         distance: "9.58 AU",
         size: "120.536 km",
-        revolution: "29 ans",
+        revolution: `29 ${t('solarSystem.timeUnits.years')}`,
         color: 0xFAD5A5,
         radius: 7,
         orbitRadius: 140,
@@ -185,11 +187,11 @@ const SolarSystem = () => {
         hasRings: true
       },
       {
-        name: "Uranus",
-        type: "Planète géante glacée",
+        name: t('solarSystem.info.uranus'),
+        type: t('solarSystem.planetTypes.iceGiant'),
         distance: "19.18 AU",
         size: "51.118 km",
-        revolution: "84 ans",
+        revolution: `84 ${t('solarSystem.timeUnits.years')}`,
         color: 0x4FD0E7,
         radius: 4.5,
         orbitRadius: 180,
@@ -197,11 +199,11 @@ const SolarSystem = () => {
         rotationSpeed: 0.015
       },
       {
-        name: "Neptune",
-        type: "Planète géante glacée",
+        name: t('solarSystem.info.neptune'),
+        type: t('solarSystem.planetTypes.iceGiant'),
         distance: "30.07 AU",
         size: "49.528 km",
-        revolution: "165 ans",
+        revolution: `165 ${t('solarSystem.timeUnits.years')}`,
         color: 0x4B70DD,
         radius: 4.2,
         orbitRadius: 220,

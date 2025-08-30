@@ -1,0 +1,150 @@
+{
+  "navigation": {
+    "home": "Home",
+    "demo": "Demo",
+    "about": "About"
+  },
+  "home": {
+    "title": "Interactive 3D Solar System",
+    "subtitle": "Explore the solar system in 3D with Three.js and React",
+    "startButton": "Start Exploration",
+    "features": {
+      "title": "Features",
+      "realistic": "Realistic 3D planets",
+      "interactive": "Interactive controls",
+      "responsive": "Responsive design",
+      "educational": "Educational content"
+    }
+  },
+  "demo": {
+    "title": "3D Solar System Demo",
+    "subtitle": "Interactive 3D simulation with Three.js and React",
+    "features": {
+      "title": "Main Features",
+      "sun": "Luminous Sun",
+      "sunDesc": "Central star with glow effect and dynamic lighting",
+      "planets": "Realistic Planets",
+      "planetsDesc": "8 planets with proportional sizes and colors",
+      "stars": "Star Field",
+      "starsDesc": "10,000 stars for immersive environment",
+      "controls": "Intuitive Controls",
+      "controlsDesc": "Smooth navigation with OrbitControls"
+    },
+    "technologies": {
+      "title": "Technologies Used",
+      "threejs": "Three.js",
+      "threejsDesc": "3D library for WebGL rendering",
+      "react": "React",
+      "reactDesc": "Modern and reactive user interface",
+      "vite": "Vite",
+      "viteDesc": "Ultra-fast development server",
+      "css3": "CSS3",
+      "css3Desc": "Advanced styles and smooth animations"
+    },
+    "gettingStarted": {
+      "title": "How to Start",
+      "install": "Installation",
+      "start": "Start",
+      "navigation": "Navigation",
+      "navigationDesc": "Links in the navigation bar"
+    },
+    "footer": "Developed with passion for interactive space exploration"
+  },
+  "solarSystem": {
+    "controls": {
+      "speed": "Speed",
+      "pause": "Pause",
+      "play": "Play",
+      "reset": "Reset View",
+      "fullscreen": "Fullscreen"
+    },
+    "info": {
+      "sun": "Sun",
+      "mercury": "Mercury",
+      "venus": "Venus",
+      "earth": "Earth",
+      "mars": "Mars",
+      "jupiter": "Jupiter",
+      "saturn": "Saturn",
+      "uranus": "Uranus",
+      "neptune": "Neptune"
+    },
+    "planetTypes": {
+      "terrestrial": "Terrestrial Planet",
+      "gasGiant": "Gas Giant Planet",
+      "iceGiant": "Ice Giant Planet"
+    },
+    "timeUnits": {
+      "days": "days",
+      "years": "years"
+    },
+    "orbits": {
+      "show": "Show Orbits",
+      "hide": "Hide Orbits"
+    },
+    "labels": {
+      "show": "Show Labels",
+      "hide": "Hide Labels"
+    },
+    "follow": "Follow Sun",
+    "loading": "Loading Solar System...",
+    "error": "Error loading Solar System"
+  },
+  "about": {
+    "title": "About the Project",
+    "description": "This interactive 3D solar system was created to provide an educational and engaging way to explore our cosmic neighborhood.",
+    "technologies": "Technologies",
+    "features": "Features",
+    "contact": "Contact"
+  },
+  "footer": {
+    "developedWithPassion": "Developed with passion for 3D web development",
+    "copyright": "© Mezes 2025 - All rights reserved | Created with Three.js, React and a bit of imagination"
+  },
+  "planetInfo": {
+    "title": "Planet Information",
+    "name": "Name",
+    "type": "Type",
+    "distance": "Distance from Sun",
+    "size": "Size",
+    "revolution": "Revolution Period"
+  },
+  "sidePanel": {
+    "controls": "Controls",
+    "info": "Information",
+    "help": "Help",
+    "openPanel": "Open panel",
+    "closePanel": "Close panel",
+    "fullscreen": "Fullscreen",
+    "exitFullscreen": "Exit fullscreen",
+    "controlsTitle": "Simulation Controls",
+    "infoTitle": "Planet Information",
+    "helpTitle": "User Guide",
+    "navigation3D": "3D Navigation",
+    "leftClickDrag": "Left click + drag",
+    "cameraRotation": "Camera rotation",
+    "scrollWheel": "Scroll wheel",
+    "zoomInOut": "Zoom in/out",
+    "rightClickDrag": "Right click + drag",
+    "cameraMove": "Camera movement",
+    "planetInteraction": "Planet Interaction",
+    "clickPlanet": "Click on a planet",
+    "showInfo": "Show information",
+    "hover": "Hover",
+    "highlightPlanets": "Highlight planets",
+    "labels": "Labels",
+    "floatingNames": "Floating planet names",
+    "speedControls": "Speed Controls",
+    "timeSpeed": "Time speed",
+    "accelerateSlow": "Accelerate/slow animation",
+    "pauseResume": "Pause/Resume",
+    "controlAnimation": "Control animation",
+    "presetViews": "Preset views",
+    "overviewFollowSun": "Overview, follow sun"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "language": "Language"
+  }
+}

@@ -1,74 +1,77 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import '../css/demo.css';
 
 const Demo = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="demo-container">
               <div className="demo-header">
-          <h1><i className="fas fa-rocket"></i> Démo du Système Solaire 3D</h1>
-          <p>Simulation interactive 3D avec Three.js et React</p>
+          <h1><i className="fas fa-rocket"></i> {t('demo.title')}</h1>
+          <p>{t('demo.subtitle')}</p>
         </div>
 
       <div className="demo-content">
         <section className="demo-section">
-          <h2><i className="fas fa-rocket"></i> Fonctionnalités Principales</h2>
+          <h2><i className="fas fa-rocket"></i> {t('demo.features.title')}</h2>
           <div className="features-grid">
             <div className="feature-card">
-              <h3><i className="fas fa-sun"></i> Soleil Lumineux</h3>
-              <p>Étoile centrale avec effet de lueur et éclairage dynamique</p>
+              <h3><i className="fas fa-sun"></i> {t('demo.features.sun')}</h3>
+              <p>{t('demo.features.sunDesc')}</p>
             </div>
             <div className="feature-card">
-              <h3><i className="fas fa-globe"></i> Planètes Réalistes</h3>
-              <p>8 planètes avec tailles et couleurs proportionnelles</p>
+              <h3><i className="fas fa-globe"></i> {t('demo.features.planets')}</h3>
+              <p>{t('demo.features.planetsDesc')}</p>
             </div>
             <div className="feature-card">
-              <h3><i className="fas fa-star"></i> Champ d'Étoiles</h3>
-              <p>10 000 étoiles pour un environnement immersif</p>
+              <h3><i className="fas fa-star"></i> {t('demo.features.stars')}</h3>
+              <p>{t('demo.features.starsDesc')}</p>
             </div>
             <div className="feature-card">
-              <h3><i className="fas fa-gamepad"></i> Contrôles Intuitifs</h3>
-              <p>Navigation fluide avec OrbitControls</p>
+              <h3><i className="fas fa-gamepad"></i> {t('demo.features.controls')}</h3>
+              <p>{t('demo.features.controlsDesc')}</p>
             </div>
           </div>
         </section>
 
         <section className="demo-section">
-          <h2><i className="fas fa-tools"></i> Technologies Utilisées</h2>
+          <h2><i className="fas fa-tools"></i> {t('demo.technologies.title')}</h2>
           <div className="tech-stack">
             <div className="tech-item">
-              <h4><i className="fas fa-cube"></i> Three.js</h4>
-              <p>Bibliothèque 3D pour le rendu WebGL</p>
+              <h4><i className="fas fa-cube"></i> {t('demo.technologies.threejs')}</h4>
+              <p>{t('demo.technologies.threejsDesc')}</p>
             </div>
             <div className="tech-item">
-              <h4><i className="fab fa-react"></i> React</h4>
-              <p>Interface utilisateur moderne et réactive</p>
+              <h4><i className="fab fa-react"></i> {t('demo.technologies.react')}</h4>
+              <p>{t('demo.technologies.reactDesc')}</p>
+              </div>
+            <div className="tech-item">
+              <h4><i className="fas fa-bolt"></i> {t('demo.technologies.vite')}</h4>
+              <p>{t('demo.technologies.viteDesc')}</p>
             </div>
             <div className="tech-item">
-              <h4><i className="fas fa-bolt"></i> Vite</h4>
-              <p>Serveur de développement ultra-rapide</p>
-            </div>
-            <div className="tech-item">
-              <h4><i className="fab fa-css3-alt"></i> CSS3</h4>
-              <p>Styles avancés et animations fluides</p>
+              <h4><i className="fab fa-css3-alt"></i> {t('demo.technologies.css3')}</h4>
+              <p>{t('demo.technologies.css3Desc')}</p>
             </div>
           </div>
         </section>
 
 
         <section className="demo-section">
-          <h2><i className="fas fa-play-circle"></i> Comment Commencer</h2>
+          <h2><i className="fas fa-play-circle"></i> {t('demo.gettingStarted.title')}</h2>
           <div className="getting-started">
             <div className="step">
-              <h3>1. Installation</h3>
+              <h3>1. {t('demo.gettingStarted.install')}</h3>
               <code>npm install</code>
             </div>
             <div className="step">
-              <h3>2. Démarrage</h3>
+              <h3>2. {t('demo.gettingStarted.start')}</h3>
               <code>npm run dev</code>
             </div>
             <div className="step">
-              <h3>3. Navigation</h3>
-              <p>Liens dans la barre de navigation</p>
+              <h3>3. {t('demo.gettingStarted.navigation')}</h3>
+              <p>{t('demo.gettingStarted.navigationDesc')}</p>
             </div>
           </div>
         </section>

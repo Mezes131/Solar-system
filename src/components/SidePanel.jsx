@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import '../css/side-panel.css';
 
 const SidePanel = ({ 
@@ -8,12 +9,13 @@ const SidePanel = ({
   onFullscreen,
   isFullscreen 
 }) => {
+  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState('controls');
 
   const tabs = [
-    { id: 'controls', label: ' Contrôles', icon: 'fa-gamepad' },
-    { id: 'info', label: ' Informations', icon: 'fa-chart-line' },
-    { id: 'help', label: ' Aide', icon: 'fa-question-circle' }
+    { id: 'controls', label: ` ${t('sidePanel.controls')}`, icon: 'fa-gamepad' },
+    { id: 'info', label: ` ${t('sidePanel.info')}`, icon: 'fa-chart-line' },
+    { id: 'help', label: ` ${t('sidePanel.help')}`, icon: 'fa-question-circle' }
   ];
 
   return (
@@ -22,7 +24,7 @@ const SidePanel = ({
       <button 
         className="side-panel-toggle"
         onClick={onToggle}
-        title={isExpanded ? "Fermer le panneau" : "Ouvrir le panneau"}
+        title={isExpanded ? t('sidePanel.closePanel') : t('sidePanel.openPanel')}
       >
         <span className="toggle-icon">
           <i className={`fas ${isExpanded ? 'fa-chevron-left' : 'fa-chevron-right'}`}></i>
@@ -33,7 +35,7 @@ const SidePanel = ({
       <button 
         className="fullscreen-toggle"
         onClick={onFullscreen}
-        title={isFullscreen ? "Quitter le plein écran" : "Plein écran"}
+        title={isFullscreen ? t('sidePanel.exitFullscreen') : t('sidePanel.fullscreen')}
       >
         <span className="fullscreen-icon">
           <i className={`fas ${isFullscreen ? 'fa-compress' : 'fa-expand'}`}></i>
@@ -60,41 +62,41 @@ const SidePanel = ({
         <div className="tab-content">
           {activeTab === 'controls' && (
             <div className="tab-panel">
-              <h3><i className="fas fa-gamepad"></i> Contrôles de Simulation</h3>
+              <h3><i className="fas fa-gamepad"></i> {t('sidePanel.controlsTitle')}</h3>
               {children.controls}
             </div>
           )}
           
           {activeTab === 'info' && (
             <div className="tab-panel">
-              <h3><i className="fas fa-chart-line"></i> Informations Planète</h3>
+              <h3><i className="fas fa-chart-line"></i> {t('sidePanel.infoTitle')}</h3>
               {children.info}
             </div>
           )}
           
           {activeTab === 'help' && (
             <div className="tab-panel">
-              <h3><i className="fas fa-question-circle"></i> Guide d'Utilisation</h3>
+              <h3><i className="fas fa-question-circle"></i> {t('sidePanel.helpTitle')}</h3>
               <div className="help-content">
-                <h4><i className="fas fa-crosshairs"></i> Navigation 3D</h4>
+                <h4><i className="fas fa-crosshairs"></i> {t('sidePanel.navigation3D')}</h4>
                 <ul>
-                  <li><strong>Clic gauche + glisser</strong> : Rotation de la caméra</li>
-                  <li><strong>Molette</strong> : Zoom avant/arrière</li>
-                  <li><strong>Clic droit + glisser</strong> : Déplacement de la caméra</li>
+                  <li><strong>{t('sidePanel.leftClickDrag')}</strong> : {t('sidePanel.cameraRotation')}</li>
+                  <li><strong>{t('sidePanel.scrollWheel')}</strong> : {t('sidePanel.zoomInOut')}</li>
+                  <li><strong>{t('sidePanel.rightClickDrag')}</strong> : {t('sidePanel.cameraMove')}</li>
                 </ul>
                 
-                <h4><i className="fas fa-globe"></i> Interaction avec les Planètes</h4>
+                <h4><i className="fas fa-globe"></i> {t('sidePanel.planetInteraction')}</h4>
                 <ul>
-                  <li><strong>Clic sur une planète</strong> : Afficher ses informations</li>
-                  <li><strong>Survol</strong> : Mise en évidence des planètes</li>
-                  <li><strong>Étiquettes</strong> : Noms flottants des planètes</li>
+                  <li><strong>{t('sidePanel.clickPlanet')}</strong> : {t('sidePanel.showInfo')}</li>
+                  <li><strong>{t('sidePanel.hover')}</strong> : {t('sidePanel.highlightPlanets')}</li>
+                  <li><strong>{t('sidePanel.labels')}</strong> : {t('sidePanel.floatingNames')}</li>
                 </ul>
                 
-                <h4><i className="fas fa-bolt"></i> Contrôles de Vitesse</h4>
+                <h4><i className="fas fa-bolt"></i> {t('sidePanel.speedControls')}</h4>
                 <ul>
-                  <li><strong>Vitesse temporelle</strong> : Accélérer/ralentir l'animation</li>
-                  <li><strong>Pause/Reprendre</strong> : Contrôler l'animation</li>
-                  <li><strong>Vues prédéfinies</strong> : Vue d'ensemble, suivre le soleil</li>
+                  <li><strong>{t('sidePanel.timeSpeed')}</strong> : {t('sidePanel.accelerateSlow')}</li>
+                  <li><strong>{t('sidePanel.pauseResume')}</strong> : {t('sidePanel.controlAnimation')}</li>
+                  <li><strong>{t('sidePanel.presetViews')}</strong> : {t('sidePanel.overviewFollowSun')}</li>
                 </ul>
               </div>
             </div>

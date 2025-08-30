@@ -1,0 +1,150 @@
+{
+  "navigation": {
+    "home": "Accueil",
+    "demo": "Démo",
+    "about": "À propos"
+  },
+  "home": {
+    "title": "Système Solaire Interactif 3D",
+    "subtitle": "Explorez le système solaire en 3D avec Three.js et React",
+    "startButton": "Commencer l'Exploration",
+    "features": {
+      "title": "Fonctionnalités",
+      "realistic": "Planètes 3D réalistes",
+      "interactive": "Contrôles interactifs",
+      "responsive": "Design responsive",
+      "educational": "Contenu éducatif"
+    }
+  },
+  "demo": {
+    "title": "Démo du Système Solaire 3D",
+    "subtitle": "Simulation interactive 3D avec Three.js et React",
+    "features": {
+      "title": "Fonctionnalités Principales",
+      "sun": "Soleil Lumineux",
+      "sunDesc": "Étoile centrale avec effet de lueur et éclairage dynamique",
+      "planets": "Planètes Réalistes",
+      "planetsDesc": "8 planètes avec tailles et couleurs proportionnelles",
+      "stars": "Champ d'Étoiles",
+      "starsDesc": "10 000 étoiles pour un environnement immersif",
+      "controls": "Contrôles Intuitifs",
+      "controlsDesc": "Navigation fluide avec OrbitControls"
+    },
+    "technologies": {
+      "title": "Technologies Utilisées",
+      "threejs": "Three.js",
+      "threejsDesc": "Bibliothèque 3D pour le rendu WebGL",
+      "react": "React",
+      "reactDesc": "Interface utilisateur moderne et réactive",
+      "vite": "Vite",
+      "viteDesc": "Serveur de développement ultra-rapide",
+      "css3": "CSS3",
+      "css3Desc": "Styles avancés et animations fluides"
+    },
+    "gettingStarted": {
+      "title": "Comment Commencer",
+      "install": "Installation",
+      "start": "Démarrage",
+      "navigation": "Navigation",
+      "navigationDesc": "Liens dans la barre de navigation"
+    },
+    "footer": "Développé avec passion pour l'exploration spatiale interactive"
+  },
+  "solarSystem": {
+    "controls": {
+      "speed": "Vitesse",
+      "pause": "Pause",
+      "play": "Lecture",
+      "reset": "Réinitialiser la Vue",
+      "fullscreen": "Plein Écran"
+    },
+    "info": {
+      "sun": "Soleil",
+      "mercury": "Mercure",
+      "venus": "Vénus",
+      "earth": "Terre",
+      "mars": "Mars",
+      "jupiter": "Jupiter",
+      "saturn": "Saturne",
+      "uranus": "Uranus",
+      "neptune": "Neptune"
+    },
+    "planetTypes": {
+      "terrestrial": "Planète tellurique",
+      "gasGiant": "Planète géante gazeuse",
+      "iceGiant": "Planète géante glacée"
+    },
+    "timeUnits": {
+      "days": "jours",
+      "years": "ans"
+    },
+    "orbits": {
+      "show": "Afficher Orbites",
+      "hide": "Masquer Orbites"
+    },
+    "labels": {
+      "show": "Afficher Étiquettes",
+      "hide": "Masquer Étiquettes"
+    },
+    "follow": "Suivre Soleil",
+    "loading": "Chargement du Système Solaire...",
+    "error": "Erreur de chargement du Système Solaire"
+  },
+  "about": {
+    "title": "À Propos du Projet",
+    "description": "Ce système solaire 3D interactif a été créé pour fournir un moyen éducatif et engageant d'explorer notre voisinage cosmique.",
+    "technologies": "Technologies",
+    "features": "Fonctionnalités",
+    "contact": "Contact"
+  },
+  "footer": {
+    "developedWithPassion": "Développé avec passion pour le développement web 3D",
+    "copyright": "© Mezes 2025 - Tous droits réservés | Créé avec Three.js, React et un peu d'imagination"
+  },
+  "planetInfo": {
+    "title": "Informations Planète",
+    "name": "Nom",
+    "type": "Type",
+    "distance": "Distance du Soleil",
+    "size": "Taille",
+    "revolution": "Période de Révolution"
+  },
+  "sidePanel": {
+    "controls": "Contrôles",
+    "info": "Informations",
+    "help": "Aide",
+    "openPanel": "Ouvrir le panneau",
+    "closePanel": "Fermer le panneau",
+    "fullscreen": "Plein écran",
+    "exitFullscreen": "Quitter le plein écran",
+    "controlsTitle": "Contrôles de Simulation",
+    "infoTitle": "Informations Planète",
+    "helpTitle": "Guide d'Utilisation",
+    "navigation3D": "Navigation 3D",
+    "leftClickDrag": "Clic gauche + glisser",
+    "cameraRotation": "Rotation de la caméra",
+    "scrollWheel": "Molette",
+    "zoomInOut": "Zoom avant/arrière",
+    "rightClickDrag": "Clic droit + glisser",
+    "cameraMove": "Déplacement de la caméra",
+    "planetInteraction": "Interaction avec les Planètes",
+    "clickPlanet": "Clic sur une planète",
+    "showInfo": "Afficher ses informations",
+    "hover": "Survol",
+    "highlightPlanets": "Mise en évidence des planètes",
+    "labels": "Étiquettes",
+    "floatingNames": "Noms flottants des planètes",
+    "speedControls": "Contrôles de Vitesse",
+    "timeSpeed": "Vitesse temporelle",
+    "accelerateSlow": "Accélérer/ralentir l'animation",
+    "pauseResume": "Pause/Reprendre",
+    "controlAnimation": "Contrôler l'animation",
+    "presetViews": "Vues prédéfinies",
+    "overviewFollowSun": "Vue d'ensemble, suivre le soleil"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Une erreur s'est produite",
+    "language": "Langue"
+  }
+}

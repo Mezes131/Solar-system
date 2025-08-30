@@ -1,21 +1,22 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import '../css/footer.css';
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-section">
-          <h3><i className="fas fa-user-astronaut"></i> À Propos de Moi</h3>
+          <h3><i className="fas fa-user-astronaut"></i> {t('about.title')}</h3>
           <p>
-            Développeur passionné par les technologies 3D et l'exploration spatiale. 
-            J'aime créer des expériences immersives qui combinent innovation technique 
-            et créativité artistique.
+            {t('about.description')}
           </p>
         </div>
         
         <div className="footer-section">
-          <h3><i className="fas fa-code"></i> Technologies Utilisées</h3>
+          <h3><i className="fas fa-code"></i> {t('about.technologies')}</h3>
           <div className="skills-grid">
             <div className="skill-item">
               <i className="fab fa-react"></i>
@@ -41,7 +42,7 @@ const Footer = () => {
         </div>
         
         <div className="footer-section">
-          <h3><i className="fas fa-envelope"></i> Contact</h3>
+          <h3><i className="fas fa-envelope"></i> {t('about.contact')}</h3>
           <div className="contact-info">
             <div className="contact-item">
               <i className="fas fa-envelope"></i>
@@ -69,10 +70,10 @@ const Footer = () => {
         <div className="footer-line"></div>
         <p>
           <i className="fas fa-heart"></i> 
-          Développé avec passion pour le developpement web 3D
+          {t('footer.developedWithPassion')}
         </p>
         <p className="copyright">
-          © Mezes 2025 - Tous droits réservés | Créé avec Three.js, React et un peu d'imagination
+          {t('footer.copyright')}
         </p>
       </div>
     </footer>

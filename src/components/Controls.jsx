@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import '../css/controls.css';
 
 const Controls = ({ 
@@ -13,10 +14,12 @@ const Controls = ({
   isPaused, 
   onTogglePause 
 }) => {
+  const { t } = useTranslation();
+
   return (
     <div id="controls" className="controls-panel">
       <div className="control-group">
-        <label htmlFor="time-speed">Vitesse Temporelle</label>
+        <label htmlFor="time-speed">{t('solarSystem.controls.speed')}</label>
         <input 
           type="range" 
           id="time-speed" 
@@ -25,7 +28,7 @@ const Controls = ({
           value={timeSpeed} 
           step="0.1" 
           onChange={(e) => onTimeSpeedChange(parseFloat(e.target.value))}
-          title="Vitesse Temporelle"
+          title={t('solarSystem.controls.speed')}
         />
         <span id="speed-value">{timeSpeed}x</span>
       </div>
@@ -36,23 +39,23 @@ const Controls = ({
           className={showOrbits ? 'active' : ''}
           onClick={onToggleOrbits}
         >
-          {showOrbits ? 'Masquer Orbites' : 'Afficher Orbites'}
+          {showOrbits ? t('solarSystem.orbits.hide') : t('solarSystem.orbits.show')}
         </button>
         <button 
           id="toggle-labels" 
           className={showLabels ? 'active' : ''}
           onClick={onToggleLabels}
         >
-          {showLabels ? 'Masquer Étiquettes' : 'Afficher Étiquettes'}
+          {showLabels ? t('solarSystem.labels.hide') : t('solarSystem.labels.show')}
         </button>
       </div>
       
       <div className="control-group buttons-container">
         <button id="reset-view" onClick={onResetView}>
-          Vue d'Ensemble
+          {t('solarSystem.controls.reset')}
         </button>
         <button id="follow-sun" onClick={onFollowSun}>
-          Suivre Soleil
+          {t('solarSystem.follow')}
         </button>
       </div>
       
@@ -62,7 +65,7 @@ const Controls = ({
           className={isPaused ? 'active' : ''}
           onClick={onTogglePause}
         >
-          {isPaused ? 'Reprendre' : 'Pause'}
+          {isPaused ? t('solarSystem.controls.play') : t('solarSystem.controls.pause')}
         </button>
       </div>
     </div>
