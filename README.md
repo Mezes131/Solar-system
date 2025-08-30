@@ -1,131 +1,192 @@
-# 🌟 Système Solaire Interactif 3D - React
+# 🌟 Interactive 3D Solar System - React
 
-Une simulation interactive et éducative du système solaire en 3D créée avec **Three.js** et **React**.
+An interactive and educational 3D solar system simulation created with **Three.js** and **React**, featuring **full internationalization support** in English and French.
 
-## 🚀 Fonctionnalités
+## 🚀 Features
 
-- **Simulation 3D Réaliste** : Soleil lumineux avec effet de lueur
-- **8 Planètes** : Mercure, Vénus, Terre, Mars, Jupiter, Saturne, Uranus, Neptune
-- **Navigation Interactive** : Contrôles de caméra fluides avec OrbitControls
-- **Champ d'Étoiles** : 10 000 étoiles pour un environnement immersif
-- **Interface React Moderne** : Navigation entre simulation et page de démo
-- **Design Responsive** : S'adapte à tous les écrans
-- **Performance Optimisée** : Rendu WebGL avec Three.js
+- **Realistic 3D Simulation** : Luminous sun with glow effects and dynamic lighting
+- **8 Planets** : Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune
+- **Interactive Navigation** : Smooth camera controls with OrbitControls
+- **Star Field** : 10,000 stars for an immersive environment
+- **Modern React Interface** : Navigation between simulation and demo page
+- **Responsive Design** : Adapts to all screen sizes
+- **Performance Optimized** : WebGL rendering with Three.js
+- **🌍 Internationalization** : Full English/French language support
+- **Language Selector** : Easy language switching in the header
+- **Interactive Controls** : Speed, pause, orbits, labels, and view controls
+- **Side Panel** : Collapsible panel with controls, info, and help guide
+- **Planet Information** : Detailed data for each celestial body
 
-## 🛠️ Technologies Utilisées
+## 🛠️ Technologies Used
 
 - **Frontend** : React 18 + React Router
 - **3D Graphics** : Three.js r128
 - **Build Tool** : Vite
-- **Styling** : CSS3 avec animations et gradients
-- **Controls** : OrbitControls pour la navigation 3D
+- **Styling** : CSS3 with animations, gradients, and backdrop filters
+- **Controls** : OrbitControls for 3D navigation
+- **Internationalization** : i18next, react-i18next, i18next-browser-languagedetector
+- **Icons** : Font Awesome 6.4.0
 
-## 📁 Structure du Projet
+## 📁 Project Structure
 
 ```
 src/
-├── components/          # Composants React
-│   ├── SolarSystem.jsx # Simulation 3D principale
-│   └── Demo.jsx        # Page de démonstration
-├── css/                # Styles CSS
-│   ├── App.css         # Styles de l'application
-│   ├── demo.css        # Styles de la page démo
-│   ├── index.css       # Styles globaux
-│   └── solar-system.css # Styles de la simulation
-├── App.jsx             # Composant principal avec routing
-├── main.jsx            # Point d'entrée React
-└── index.html          # HTML principal
+├── components/              # React components
+│   ├── SolarSystem.jsx     # Main 3D simulation
+│   ├── Demo.jsx            # Demo page
+│   ├── Controls.jsx        # Simulation controls
+│   ├── PlanetInfo.jsx      # Planet information panel
+│   ├── SidePanel.jsx       # Collapsible side panel
+│   ├── PlanetLabels.jsx    # Dynamic planet labels
+│   ├── Footer.jsx          # Application footer
+│   ├── LanguageSelector.jsx # Language switching component
+│   └── App.jsx             # Main app with routing
+├── css/                    # CSS styles
+│   ├── App.css             # App styles
+│   ├── demo.css            # Demo page styles
+│   ├── index.css           # Global styles
+│   ├── solar-system.css    # Simulation styles
+│   ├── controls.css        # Control panel styles
+│   ├── planet-info.css     # Planet info styles
+│   ├── side-panel.css      # Side panel styles
+│   ├── footer.css          # Footer styles
+│   └── language-selector.css # Language selector styles
+├── i18n/                   # Internationalization
+│   ├── index.js            # i18n configuration
+│   └── locales/            # Translation files
+│       ├── en.json         # English translations
+│       └── fr.json         # French translations
+├── App.jsx                 # Main component with routing
+├── main.jsx                # React entry point
+└── index.html              # Main HTML file
 ```
 
-## 🚀 Installation et Démarrage
+## 🚀 Installation and Setup
 
-### Prérequis
-- Node.js (version 16 ou supérieure)
-- npm ou yarn
+### Prerequisites
+- Node.js (version 16 or higher)
+- npm or yarn
 
 ### Installation
 ```bash
-# Cloner le projet
-git clone [url-du-repo]
+# Clone the project
+git clone [repository-url]
 cd solar-system-react
 
-# Installer les dépendances
+# Install dependencies
 npm install
 
-# Démarrer le serveur de développement
+# Start development server
 npm run dev
 ```
 
-### Scripts Disponibles
+### Available Scripts
 ```bash
-npm run dev      # Démarre le serveur de développement (port 3000)
-npm run build    # Construit l'application pour la production
-npm run preview  # Prévisualise la version de production
-npm run lint     # Vérifie le code avec ESLint
+npm run dev      # Start development server (port 3000)
+npm run build    # Build application for production
+npm run preview  # Preview production build
+npm run lint     # Check code with ESLint
 ```
 
-## 🎮 Utilisation
+## 🌍 Internationalization Features
+
+### Supported Languages
+- **English** (default) - `en`
+- **French** - `fr`
+
+### Language Switching
+- **Header Button** : Language selector in the top navigation
+- **Real-time Updates** : All text updates immediately when language changes
+- **Persistent Settings** : Language preference saved in localStorage
+- **Automatic Detection** : Detects browser language on first visit
+
+### Translation Coverage
+- ✅ **Navigation** : All menu items and titles
+- ✅ **Solar System** : Planet names, types, and scientific data
+- ✅ **Controls** : All buttons, labels, and tooltips
+- ✅ **Information Panels** : Planet details and descriptions
+- ✅ **Help Guide** : Complete user manual in both languages
+- ✅ **Demo Page** : Feature descriptions and instructions
+- ✅ **Footer** : About section and contact information
+
+## 🎮 Usage
 
 ### Navigation
-- **Route `/`** : Simulation 3D interactive du système solaire
-- **Route `/demo`** : Page de démonstration avec informations et guide
+- **Route `/`** : Interactive 3D solar system simulation
+- **Route `/demo`** : Demo page with features and guide
 
-### Contrôles 3D
-- **Clic gauche + glisser** : Rotation de la caméra autour du système
-- **Molette de souris** : Zoom avant/arrière
-- **Clic droit + glisser** : Déplacement de la caméra
+### 3D Controls
+- **Left click + drag** : Rotate camera around the system
+- **Mouse wheel** : Zoom in/out
+- **Right click + drag** : Move camera position
 
-### Fonctionnalités Interactives
-- **Planètes Cliquables** : Sélectionnez une planète pour voir ses informations
-- **Effets Visuels** : Lueur du soleil, éclairage dynamique des planètes
-- **Animations Fluides** : Rotation des planètes et révolution autour du soleil
+### Interactive Features
+- **Clickable Planets** : Select a planet to view detailed information
+- **Visual Effects** : Sun glow, dynamic planet lighting
+- **Smooth Animations** : Planet rotation and revolution around the sun
+- **Control Panel** : Adjust time speed, toggle orbits/labels
+- **Side Panel** : Access controls, information, and help guide
 
-## 🌟 Caractéristiques Techniques
+### Language Controls
+- **Language Selector** : Click the language button in the header
+- **Dropdown Menu** : Choose between English and French
+- **Instant Translation** : All text updates immediately
 
-### Rendu 3D
-- **WebGL Renderer** avec antialiasing
-- **Perspective Camera** pour une vue réaliste
-- **Fog Effect** pour la profondeur
-- **Shadow Maps** pour l'éclairage avancé
+## 🌟 Technical Features
+
+### 3D Rendering
+- **WebGL Renderer** with antialiasing
+- **Perspective Camera** for realistic view
+- **Fog Effect** for depth perception
+- **Dynamic Lighting** with sun point light
 
 ### Performance
-- **BufferGeometry** pour les étoiles
-- **Optimisation des matériaux** Three.js
-- **Gestion de la mémoire** avec cleanup React
-- **Responsive rendering** adaptatif
+- **BufferGeometry** for star field optimization
+- **Material optimization** with Three.js
+- **Memory management** with React cleanup
+- **Responsive rendering** adaptation
 
-### Accessibilité
-- **Navigation au clavier** supportée
-- **Focus visible** pour les éléments interactifs
-- **Labels descriptifs** pour tous les contrôles
-- **Contraste élevé** pour la lisibilité
+### Accessibility
+- **Keyboard navigation** support
+- **Visible focus** for interactive elements
+- **Descriptive labels** for all controls
+- **High contrast** for readability
+
+### Internationalization
+- **i18next framework** for robust translation management
+- **React hooks** integration with useTranslation
+- **Language detection** with browser and localStorage fallbacks
+- **Dynamic content** translation for all user-facing text
 
 ## 📱 Responsive Design
 
-L'application s'adapte parfaitement à tous les écrans :
-- **Desktop** : Interface complète avec tous les contrôles
-- **Tablet** : Navigation tactile optimisée
-- **Mobile** : Interface adaptée aux petits écrans
+The application perfectly adapts to all screen sizes:
+- **Desktop** : Complete interface with all controls
+- **Tablet** : Touch-optimized navigation
+- **Mobile** : Interface adapted for small screens
 
-## 🎨 Personnalisation
+## 🎨 Design Features
 
-### Couleurs et Thèmes
-- **Palette spatiale** : Noirs, bleus et jaunes
-- **Gradients dynamiques** pour les titres
-- **Effets de transparence** pour la profondeur
+### Visual Theme
+- **Space Palette** : Blacks, blues, and yellows
+- **Dynamic Gradients** for titles
+- **Transparency Effects** for depth
+- **Backdrop Filters** for modern glass-morphism effects
 
 ### Animations
-- **Transitions CSS** fluides
-- **Keyframes** pour les effets spéciaux
-- **Hover effects** interactifs
+- **Smooth CSS Transitions**
+- **Keyframe Animations** for special effects
+- **Interactive Hover Effects**
+- **3D Transformations** for immersive experience
 
-## 🔧 Développement
+## 🔧 Development
 
-### Ajouter de Nouvelles Planètes
+### Adding New Planets
 ```javascript
-// Dans SolarSystem.jsx
+// In SolarSystem.jsx
 const newPlanet = {
-  name: "Nouvelle Planète",
+  name: t('solarSystem.info.newPlanet'),
+  type: t('solarSystem.planetTypes.newType'),
   color: 0xRRGGBB,
   radius: 2.0,
   orbitRadius: 250,
@@ -134,56 +195,90 @@ const newPlanet = {
 };
 ```
 
-### Modifier l'Éclairage
+### Adding New Translations
 ```javascript
-// Ajuster l'intensité de la lumière solaire
+// In en.json
+"newSection": {
+  "title": "New Section Title",
+  "description": "New section description"
+}
+
+// In fr.json
+"newSection": {
+  "title": "Titre de la Nouvelle Section",
+  "description": "Description de la nouvelle section"
+}
+```
+
+### Modifying Lighting
+```javascript
+// Adjust sun light intensity
 const sunLight = new THREE.PointLight(0xffffff, 15, 6000);
 ```
 
-### Ajouter de Nouvelles Routes
+### Adding New Routes
 ```javascript
-// Dans App.jsx
-<Route path="/nouvelle-route" element={<NouveauComposant />} />
+// In App.jsx
+<Route path="/new-route" element={<NewComponent />} />
 ```
 
-## 🚀 Déploiement
+## 🚀 Deployment
 
-### Build de Production
+### Production Build
 ```bash
 npm run build
 ```
 
-### Serveur de Production
+### Production Server
 ```bash
 npm run preview
 ```
 
-### Déploiement sur Vercel/Netlify
-- Connectez votre repository
-- Configurez la commande de build : `npm run build`
-- Définissez le dossier de sortie : `dist`
+### Deployment on Vercel/Netlify
+- Connect your repository
+- Configure build command: `npm run build`
+- Set output directory: `dist`
 
-## 🤝 Contribution
+## 🤝 Contributing
 
-1. Fork le projet
-2. Créez une branche pour votre fonctionnalité
-3. Committez vos changements
-4. Poussez vers la branche
-5. Ouvrez une Pull Request
+1. Fork the project
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Open a Pull Request
 
-## 📄 Licence
+### Translation Contributions
+- Add new translation keys to both `en.json` and `fr.json`
+- Ensure consistent terminology across languages
+- Test language switching functionality
+- Update this README if adding new features
 
-Ce projet est sous licence ISC. Voir le fichier `LICENSE` pour plus de détails.
+## 📄 License
 
-## 🙏 Remerciements
+This project is under ISC license. See the `LICENSE` file for more details.
 
-- **Three.js** pour la bibliothèque 3D
-- **React** pour l'interface utilisateur
-- **Vite** pour l'outil de build
-- **Communauté open source** pour l'inspiration
+## 🙏 Acknowledgments
+
+- **Three.js** for the 3D library
+- **React** for the user interface
+- **Vite** for the build tool
+- **i18next** for internationalization
+- **Font Awesome** for icons
+- **Open source community** for inspiration
 
 ---
 
-**Développé avec ❤️ pour l'exploration spatiale interactive**
+**Developed with ❤️ for 3D development**
 
-*Explorez l'univers depuis votre navigateur !* 🚀✨
+*Explore the universe from your browser!* 🚀✨
+
+## 🌟 Recent Updates
+
+### Version 2.0 - Internationalization Release
+- ✨ **Full i18n Support** : English and French languages
+- 🌍 **Language Selector** : Easy language switching in header
+- 🔧 **Enhanced Controls** : Improved simulation controls
+- 📱 **Better Responsiveness** : Optimized for all devices
+- 🎨 **Visual Improvements** : Enhanced dark futuristic theme
+- 📚 **Complete Help Guide** : User manual in both languages
+- 🔬 **Scientific Data** : Translated planet information and types

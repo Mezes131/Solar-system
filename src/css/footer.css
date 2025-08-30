@@ -36,8 +36,8 @@
 
 .footer-section {
   background: rgba(26, 31, 58, 0.3);
-  backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
   border: 1px solid rgba(120, 119, 198, 0.2);
   border-radius: 20px;
   padding: 30px;
