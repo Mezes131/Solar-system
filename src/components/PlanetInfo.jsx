@@ -35,7 +35,6 @@ const PlanetInfo = ({ selectedPlanet, planetData }) => {
 
   return (
     <div id="info-panel" className="info-panel">
-      <h2>{t('planetInfo.title')}</h2>
       <div className="info-item">
         <span className="info-label">{t('planetInfo.name')}:</span>
         <span className="info-value">{planetData.name}</span>
