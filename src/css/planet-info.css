@@ -1,0 +1,113 @@
+/* planet-info.css - Styles modernisés pour le panneau d'informations des planètes */
+
+.info-panel {
+  background: transparent;
+  border: none;
+  padding: 0;
+  min-width: auto;
+  max-width: none;
+  animation: none;
+}
+
+.info-panel h2 {
+  color: #f1f5f9;
+  margin: 0 0 20px 0;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  border-bottom: 2px solid rgba(148, 163, 184, 0.2);
+  padding-bottom: 12px;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 16px;
+  background: rgba(30, 41, 59, 0.3);
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.info-item:hover {
+  background: rgba(30, 41, 59, 0.4);
+  border-color: rgba(148, 163, 184, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.info-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.info-label {
+  color: #94a3b8;
+  font-size: 13px;
+  font-weight: 500;
+  flex: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.info-value {
+  color: #f1f5f9;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: right;
+  flex: 1;
+  margin-left: 20px;
+  padding: 8px 12px;
+  background: rgba(148, 163, 184, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .info-item {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 12px;
+    margin-bottom: 12px;
+  }
+  
+  .info-value {
+    margin-left: 0;
+    margin-top: 8px;
+    text-align: left;
+    width: 100%;
+    padding: 6px 10px;
+  }
+  
+  .info-panel h2 {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .info-item {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .info-panel h2 {
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+  
+  .info-label,
+  .info-value {
+    font-size: 12px;
+  }
+  
+  .info-value {
+    padding: 5px 8px;
+  }
+}

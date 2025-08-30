@@ -1,0 +1,172 @@
+/* controls.css - Styles modernisés pour le panneau de contrôles */
+
+.control-group {
+  margin-bottom: 25px;
+  padding: 1rem;
+  background: rgba(30, 41, 59, 0.3);
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.control-group.buttons-container {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.control-group:last-child {
+  margin-bottom: 0;
+}
+
+.control-group label {
+  display: block;
+  margin-bottom: 12px;
+  color: #cbd5e1;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.control-group input[type="range"] {
+  width: 100%;
+  margin-bottom: 12px;
+  background: rgba(148, 163, 184, 0.2);
+  border-radius: 10px;
+  height: 8px;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.control-group input[type="range"]:hover {
+  background: rgba(148, 163, 184, 0.3);
+}
+
+.control-group input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  border: 2px solid white;
+  transition: all 0.3s ease;
+}
+
+.control-group input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.control-group input[type="range"]::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.control-group button {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  border: none;
+  padding: 12px 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-right: 12px;
+  margin-bottom: 12px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  width: 9rem;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.control-group button:hover {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+}
+
+.control-group button.active {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+}
+
+.control-group button.active:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.5);
+}
+
+#speed-value {
+  color: #fbbf24;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  display: block;
+  padding: 8px 16px;
+  background: rgba(251, 191, 36, 0.1);
+  border-radius: 12px;
+  border: 1px solid rgba(251, 191, 36, 0.2);
+  margin-top: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .control-group {
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .control-group button {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+    padding: 10px 16px;
+    font-size: 12px;
+  }
+  
+  .control-group label {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  
+  #speed-value {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .control-group {
+    padding: 12px;
+    margin-bottom: 15px;
+  }
+  
+  .control-group button {
+    padding: 8px 12px;
+    font-size: 11px;
+    min-width: 80px;
+  }
+  
+  .control-group label {
+    font-size: 11px;
+    margin-bottom: 8px;
+  }
+  
+  #speed-value {
+    font-size: 13px;
+    padding: 5px 10px;
+  }
+}

@@ -1,21 +1,31 @@
 {
-  "name": "solar-system",
+  "name": "solar-system-react",
   "version": "1.0.0",
-  "description": "Une simulation interactive et éducative du système solaire en 3D créée avec Three.js.",
-  "main": "index.js",
+  "description": "Une simulation interactive et éducative du système solaire en 3D créée avec Three.js et React",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0"
   },
-  "keywords": [],
+  "keywords": ["threejs", "react", "3d", "solar-system", "astronomy", "education"],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "three": "^0.179.1"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0",
+    "three": "^0.128.0"
   },
   "devDependencies": {
-    "vite": "^7.1.3"
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "vite": "^5.3.4"
   }
 }

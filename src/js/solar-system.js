@@ -56,6 +56,7 @@ class SolarSystem {
         this.renderer.shadowMap.enabled = true;
         this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
         this.renderer.setClearColor(0x000000, 1);
+
         
         document.getElementById('container').appendChild(this.renderer.domElement);
 
@@ -81,6 +82,8 @@ class SolarSystem {
         const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
         directionalLight.position.set(0, 100, 0);
         this.scene.add(directionalLight);
+
+        
     }
 
     createSun() {
@@ -232,6 +235,7 @@ class SolarSystem {
         const planetGeometry = new THREE.SphereGeometry(data.radius, 64, 64);
         const planetMaterial = new THREE.MeshLambertMaterial({
             color: data.color,
+            shininess: 10,
             emissive: data.color,
             emissiveIntensity: 0.1
         });
