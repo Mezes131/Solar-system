@@ -143,9 +143,6 @@
 }
 
 @media (max-width: 480px) {
-  .language-toggle .language-code {
-    display: none;
-  }
   
   .language-toggle {
     padding: 8px;

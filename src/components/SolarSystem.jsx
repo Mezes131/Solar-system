@@ -20,7 +20,7 @@ const SolarSystem = () => {
   // États pour les contrôles
   const [timeSpeed, setTimeSpeed] = useState(1);
   const [showOrbits, setShowOrbits] = useState(true);
-  const [showLabels, setShowLabels] = useState(true);
+  const [showLabels, setShowLabels] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
   const [selectedPlanet, setSelectedPlanet] = useState(null);
   const [planets, setPlanets] = useState({});
