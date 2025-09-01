@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Fond avec dégradé -->
+  <defs>
+    <radialGradient id="sunGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#FFA500;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF4500;stop-opacity:1" />
+    </radialGradient>
+    <radialGradient id="planetGradient1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4682B4;stop-opacity:1" />
+    </radialGradient>
+    <radialGradient id="planetGradient2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#DDA0DD;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9370DB;stop-opacity:1" />
+    </radialGradient>
+    <radialGradient id="planetGradient3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#98FB98;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#32CD32;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Fond sombre -->
+  <rect width="32" height="32" fill="#0a0e27" rx="4"/>
+  
+  <!-- Soleil au centre -->
+  <circle cx="16" cy="16" r="4" fill="url(#sunGradient)"/>
+  
+  <!-- Rayons du soleil -->
+  <g stroke="#FFD700" stroke-width="0.5" opacity="0.8">
+    <line x1="16" y1="8" x2="16" y2="4"/>
+    <line x1="16" y1="28" x2="16" y2="24"/>
+    <line x1="8" y1="16" x2="4" y2="16"/>
+    <line x1="28" y1="16" x2="24" y2="16"/>
+    <line x1="11" y1="11" x2="8" y2="8"/>
+    <line x1="24" y1="24" x2="21" y2="21"/>
+    <line x1="11" y1="21" x2="8" y2="24"/>
+    <line x1="24" y1="8" x2="21" y2="11"/>
+  </g>
+  
+  <!-- Planète 1 (bleue) -->
+  <circle cx="24" cy="12" r="1.5" fill="url(#planetGradient1)"/>
+  
+  <!-- Planète 2 (violette) -->
+  <circle cx="8" cy="20" r="1.2" fill="url(#planetGradient2)"/>
+  
+  <!-- Planète 3 (verte) -->
+  <circle cx="26" cy="22" r="1" fill="url(#planetGradient3)"/>
+  
+  <!-- Orbites (traces subtiles) -->
+  <g stroke="#7877c6" stroke-width="0.3" opacity="0.3" fill="none">
+    <circle cx="16" cy="16" r="8"/>
+    <circle cx="16" cy="16" r="12"/>
+    <circle cx="16" cy="16" r="16"/>
+  </g>
+</svg>
