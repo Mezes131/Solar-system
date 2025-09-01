@@ -20,7 +20,8 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: 'en', // Langue par défaut
+    lng: 'en', // Force la langue par défaut à l'anglais
+    fallbackLng: 'en', // Langue de fallback
     debug: false,
     
     interpolation: {
@@ -28,8 +29,16 @@ i18n
     },
     
     detection: {
-      order: ['localStorage', 'navigator', 'htmlTag'],
+      order: ['localStorage', 'querystring', 'cookie', 'navigator', 'htmlTag'],
       caches: ['localStorage'],
+      lookupLocalStorage: 'i18nextLng',
+      lookupQuerystring: 'lng',
+      lookupCookie: 'i18next',
+    }
+  }).then(() => {
+    // S'assurer que l'anglais est la langue par défaut si aucune langue n'est sauvegardée
+    if (!localStorage.getItem('i18nextLng')) {
+      i18n.changeLanguage('en');
     }
   });
 

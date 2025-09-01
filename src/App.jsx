@@ -31,6 +31,7 @@ function App() {
         <main className="main-content">
                   <Routes>
           <Route path="/" element={<SolarSystem />} />
+          <Route path="/Solar-system" element={<SolarSystem />} />
           <Route path="/demo" element={<Demo />} />
         </Routes>
       </main>
